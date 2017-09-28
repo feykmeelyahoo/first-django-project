@@ -17,3 +17,6 @@ python manage.py createsuperuser
 # Write populate.py to populate db
 pip install faker
 python populate.py
+
+pip freeze > stable-req.txt
+pip install -r stable-req.txt
