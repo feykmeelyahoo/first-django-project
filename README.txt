@@ -1,3 +1,5 @@
+# Go to https://github.com/feykmeelyahoo/dockeransibletodobackend for virtual env installation
+
 python3 -m venv MyDjangoEnv
 
 . MyDjangoEnv/bin/activate
