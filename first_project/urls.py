@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from first_app import views
+from first_app import views as firstAppViews
+# from level2_ex import views
 
 urlpatterns = [
-    url(r'^$', views.index, name="index"),
+    url(r'^$', include('first_app.urls')), # Buda oluyor Boylesi daha da iyi
+    url(r'^index', firstAppViews.index, name="index"), # Buda oluyor
     url(r'^first_app/', include('first_app.urls')),
+    url(r'^users/', include('level2_ex.urls')),
     url(r'^admin/', admin.site.urls),
 ]
